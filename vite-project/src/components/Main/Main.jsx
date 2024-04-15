@@ -2,11 +2,7 @@ import {Column} from '../Column/Column.jsx';
 import {Card} from '../Card/Card.jsx';
 
 export const Main = ({MainColumn}) => {
-  // const tasks = [{
-  //   NameLesson: "Web design",
-  //   CardTitle: "Новая задача",
-  //   CardThemeColor: "_orange",
-  // }]
+
 
     return (
         <main className="main">
