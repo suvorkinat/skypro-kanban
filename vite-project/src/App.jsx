@@ -14,6 +14,7 @@ function App() {
 
   return (
     <>
+
       <div className='wrapper'>
       <PopExit />
         <PopNewCard />
@@ -23,6 +24,8 @@ function App() {
         <Header />
         <Main />
 
+=======
+     
       </div>
       </>     
   )
