@@ -1,11 +1,23 @@
-export const  Column = ({title, cards}) => {
+export const  Column = ({status, cards}) => {
     // const =cards;
       return (
           <div className="main__column column">
             <div className="column__title">
-              <p>{title}</p>
+              <p>{status}</p>
             </div>
-            <div className="cards">{cards}</div>
+            <div className="cards">
+            {cards.map(
+              (card, id) => (
+                <Card
+                  key={id}
+                  NameLesson={card.theme}
+                  CardThemeColor={card.ThemeColor}
+                  CardTitle={card.title}
+                  cardDate={card.date}
+                />
+              )
+            )}
           </div>
-      )
-  }
+        </div>
+    )
+}
