@@ -1,3 +1,5 @@
+import { Card } from "../Card/Card"
+
 export const  Column = ({status, cards}) => {
     // const =cards;
       return (
