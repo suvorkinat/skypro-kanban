@@ -1,92 +1,35 @@
 import {Column} from '../Column/Column.jsx';
-import {Card} from '../Card/Card.jsx';
+//import {Card} from '../Card/Card.jsx';
 
-export const Main = ({MainColumn}) => {
-
-
+export const Main = ({cards}) => {
     return (
         <main className="main">
           <div className="container">
             <div className="main__block">
               <div className="main__content">
-                {MainColumn}
-                <Column title={"Без статуса"}
+                <Column status={"Без статуса"}
                   cards = {
-                    <>
-                      <Card
-                        NameLesson={"Researh"}
-                        CardThemeColor={"_green"}
-                        CardTitle={"Новая задача"}
-                      />
-                      <Card
-                        NameLesson={"Web design"}
-                        CardThemeColor={"_orange"}
-                        CardTitle={"Новая задача"}
-                      />
-                      <Card
-                        NameLesson={"Copywriting"}
-                        CardThemeColor={"_purple"}
-                        CardTitle={"Новая задача"}
-                      />
-                      <Card
-                        NameLesson={"Web design"}
-                        CardThemeColor={"_orange"}
-                        CardTitle={"Новая задача"}
-                      />
-                    </>
+                    cards.filter((task) => task.status === "Без статуса")
                   }
                 />
-                <Column title={"Нужно сделать"}
+                <Column status={"Нужно сделать"}
                   cards = {
-                    <>
-                      <Card
-                        NameLesson={"Research"}
-                        CardThemeColor={"_green"}
-                        CardTitle={"Новая задача"}
-                      />
-                    </>                  }
-                />
-                <Column title={"В работе"}
-                  cards = {
-                    <>
-                      <Card
-                        NameLesson={"Researh"}
-                        CardThemeColor={"_green"}
-                        CardTitle={"Новая задача"}
-                      />
-                      <Card
-                        NameLesson={"Copywriting"}
-                        CardThemeColor={"_purple"}
-                        CardTitle={"Новая задача"}
-                      />
-                      <Card
-                        NameLesson={"Web design"}
-                        CardThemeColor={"_orange"}
-                        CardTitle={"Новая задача"}
-                      />
-                    </>
+                    cards.filter((task) => task.status === "Нужно сделать")
                   }
                 />
-                <Column title={"Теститрование"}
+                <Column status={"В работе"}
                   cards = {
-                    <>
-                      <Card
-                        NameLesson={"Research"}
-                        CardThemeColor={"_green"}
-                        CardTitle={"Новая задача"}
-                      />
-                    </>
+                    cards.filter((task) => task.status === "В работе")
                   }
                 />
-                <Column title={ "Готово"}
+                <Column status={"Тестирование"}
                   cards = {
-                    <>
-                      <Card
-                        NameLesson={"Research"}
-                        CardThemeColor={"_green"}
-                        CardTitle={"Новая задача"}
-                      />
-                    </> 
+                    cards.filter((task) => task.status === "Тестирование")
+                  }
+                />
+                <Column status={"Готово"}
+                  cards = {
+                    cards.filter((task) => task.status === "Готово")
                   }
                 />
               </div>

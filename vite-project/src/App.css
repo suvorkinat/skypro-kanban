@@ -107,10 +107,12 @@ body {
 
 ._hover02:hover, .header__user:hover {
   color: #33399b;
+  cursor: pointer;
 }
 ._hover02:hover::after, .header__user:hover::after {
   border-left-color: #33399b;
   border-bottom-color: #33399b;
+ 
 }
 
 ._hover03:hover {
@@ -821,7 +823,7 @@ body {
   padding: 0;
 }
 .header__pop-user-set {
-  display: none;
+  display: block;
   position: absolute;
   top: 61px;
   right: 0;
@@ -850,9 +852,10 @@ body {
   display: flex;
 }
 .main__column {
-  width: 20%;
+  width: 100%;
   margin: 0 auto;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .column__title {
