@@ -1,12 +1,13 @@
 import {Column} from '../Column/Column.jsx';
-//import {Card} from '../Card/Card.jsx';
+import * as S from "./Main.styled.js";
+import { Container } from "../../global.styled.js";
 
 export const Main = ({cards}) => {
     return (
-        <main className="main">
-          <div className="container">
-            <div className="main__block">
-              <div className="main__content">
+        <S.StyleMain>
+          <Container>
+            <S.MainBlock>
+              <S.StyledMainContent>
                 <Column status={"Без статуса"}
                   cards = {
                     cards.filter((task) => task.status === "Без статуса")
@@ -32,9 +33,9 @@ export const Main = ({cards}) => {
                     cards.filter((task) => task.status === "Готово")
                   }
                 />
-              </div>
-            </div>
-          </div>
-        </main>
+              </S.StyledMainContent>
+            </S.MainBlock>
+          </Container>
+        </S.StyleMain>
     )
 }

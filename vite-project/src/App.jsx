@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
 import './App.css'
 import { format } from "date-fns";
-//import WelcomeMessage from './components/WelcomeMessage';
 import { PopExit } from './components/Popups/PopExit/PopExit.jsx';
 import { PopBrowse } from './components/Popups/PopBrowse/PopBrowse.jsx';
 import { PopNewCard } from './components/Popups/PopNewCard/PopNewCard.jsx';

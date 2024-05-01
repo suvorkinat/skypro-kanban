@@ -634,43 +634,6 @@
 ._dark {
   display: none;
 }
-/*
-
-
-*/
-.main {
-  width: 100%;
-  background-color: #EAEEF6;
-}
-.main__block {
-  width: 100%;
-  margin: 0 auto;
-  padding: 25px 0 49px;
-}
-.main__content {
-  width: 100%;
-  display: flex;
-}
-.main__column {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.column__title {
-  padding: 0 10px;
-  margin: 15px 0;
-}
-.column__title p {
-  color: #94A6BE;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  display: flex;
-}
-
 .cards {
   width: 100%;
   display: block;
