@@ -8,15 +8,15 @@ export const Card = ({ CardTheme, CardTitle, cardDate }) => {
           <S.CardGroup>
             <S.CardTheme $color={topicColor[CardTheme]}>
               <S.CardName>{CardTheme}</S.CardName>
-              </S.CardTheme>
+            </S.CardTheme>
             <a href="#popBrowse" target="_self">
               <S.CardBtn>
-                <S.CardBtnDiv/>
+                <S.CardBtnDiv />
                 <S.CardBtnDiv />
                 <S.CardBtnDiv />
               </S.CardBtn>
             </a>
-            </S.CardGroup>
+          </S.CardGroup>
           <S.CardContent>
             <a href="" target="_blank">
               <S.CardTitle>{CardTitle}</S.CardTitle>
@@ -51,9 +51,9 @@ export const Card = ({ CardTheme, CardTitle, cardDate }) => {
                 </defs>
               </svg>
               <p>{cardDate}</p>
-           </S.CardDate>
-           </S.CardContent>
-           </S.CardsCard>
-           </S.CardItem>
+            </S.CardDate>
+          </S.CardContent>
+        </S.CardsCard>
+      </S.CardItem>
     );
   }

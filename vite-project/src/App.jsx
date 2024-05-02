@@ -7,11 +7,18 @@ import { PopNewCard } from './components/Popups/PopNewCard/PopNewCard.jsx';
 import {Header} from './components/Header/Header.jsx';
 import {Main} from './components/Main/Main';
 import {cardList} from './data.js';
+import {lightTheme, darkTheme} from './themes.js';
+import { GlobalStyled, Wrapper } from './global.styled.js';
+import { ThemeProvider } from 'styled-components';
+
 
 function App() {
 
   const [cards, setCards] = useState(cardList);
   const [isLoading, setIsLoading] = useState(true);
+
+  const [theme, setTheme] = useState(true);
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -33,22 +40,22 @@ function App() {
     console.log(newCard)
   }
   return (
-    <>
-
-      <div className='wrapper'>
+    <ThemeProvider theme={theme ? lightTheme : darkTheme}>
+    <GlobalStyled />
+    <Wrapper>
       <PopExit />
         <PopNewCard />
         <PopBrowse />
         {/* pop-up end*/}
 
-        <Header addCard={addCard} />
+        <Header addCard={addCard} setTheme={setTheme} theme={theme} />
         {isLoading ? ("Загрузка...") : (
           <Main cards={cards}/>
         )}
         
      
-      </div>
-      </>     
+      </Wrapper>
+      </ThemeProvider>     
   )
 }
 
