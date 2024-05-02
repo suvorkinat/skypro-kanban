@@ -43,7 +43,6 @@ export const GlobalStyled = createGlobalStyle `
 .read-the-docs {
   color: #888;
 }
-/* Main.css */
 
 * {
   margin: 0;
@@ -89,29 +88,7 @@ body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   color: ${({theme})=> theme.text};
   background-color: ${({theme})=> theme.body};
-}
-
-
-// ._hover01:hover {
-//     background-color: #33399b;
-// }
-
-// ._hover02:hover, .header__user:hover {
-//     color: #33399b;
-// }
-// ._hover02:hover::after, .header__user:hover::after {
-//     border-left-color: #33399b;
-//     border-bottom-color: #33399b;
-// }
-
-// ._hover03:hover {
-//     background-color: #33399b;
-//     color: #FFFFFF;
-// }
-// ._hover03:hover a {
-//     color: #FFFFFF;
-// }
-// `;
+}`;
 
 export const Wrapper = styled.div `
     max-width: 100%;
@@ -121,7 +98,7 @@ export const Wrapper = styled.div `
     background-color: #F1F1F1;
 `;
 
-// Добавление смены темы
+//Добавление смены темы
 export const Container = styled.div`
 max-width: 1260px;
 width: 100%;
@@ -134,7 +111,7 @@ background-color: ${({theme})=>theme.body};
       width: 100%;
       padding: 0 16px;
 }
-`;
+`; 
 
 
 export const Hover1 = (block) => styled[block] `
