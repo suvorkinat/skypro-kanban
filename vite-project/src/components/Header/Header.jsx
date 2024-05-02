@@ -13,7 +13,6 @@ export const Header = ({addCard, setTheme, theme}) => {
     //
     return (
         <S.Header>
-            <Container>
                 <S.HeaderBlock>
                     <div>
                         <a href="" target="_self">
@@ -50,8 +49,7 @@ export const Header = ({addCard, setTheme, theme}) => {
                             </div>
                         )}
                     </S.HeaderNav>
-                </S.HeaderBlock>
-            </Container>
+                </S.HeaderBlock>     
         </S.Header>
     )
 }

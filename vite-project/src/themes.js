@@ -1,5 +1,5 @@
 export const lightTheme = {
-    body: '#FFF',
+    body: '#eaeef6',
     text: '#363537',
     // Другие стили светлой темы
 };
