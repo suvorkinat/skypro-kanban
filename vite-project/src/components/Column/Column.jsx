@@ -1,25 +1,25 @@
-import { Card } from "../Card/Card"
+import { Card } from "../Card/Card";
+
+import *as S from "./Column.styled";
 
 export const  Column = ({status, cards}) => {
-    // const =cards;
-      return (
-          <div className="main__column column">
-            <div className="column__title">
-              <p>{status}</p>
-            </div>
-            <div className="cards">
+    return (
+        <div className="main__column column">
+          <S.ColumnTitle>
+            <p>{status}</p>
+          </S.ColumnTitle>
+          <S.StyledCard>
             {cards.map(
               (card, id) => (
                 <Card
                   key={id}
-                  NameLesson={card.theme}
-                  CardThemeColor={card.ThemeColor}
+                  CardTheme={card.theme}
                   CardTitle={card.title}
                   cardDate={card.date}
                 />
               )
             )}
-          </div>
+          </S.StyledCard>
         </div>
     )
 }
