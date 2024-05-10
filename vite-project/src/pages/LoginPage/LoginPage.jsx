@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { Wrapper } from '../../lib/global.styled.js';
-//import * as S from "./LoginPage.styled.js";
+import * as S from '../../pages/LoginPage/LoginPage.styled.js';
 import { routesPath } from "../../lib/routesPath.js";
 
 
@@ -11,11 +11,11 @@ export const LoginPage = ({ login }) => {
       <>
         <Wrapper>
           <S.ContainerLogin>
-            <S.Model>
+            <S.Modal>
               <S.ModalBlock>
-                <S.ModelTtl>
+                <S.ModalTtl>
                   <h2>Вход</h2>
-                </S.ModelTtl>
+                </S.ModalTtl>
                 <S.ModalFormLogin id="formLogIn" action="#">
                   <S.ModalInput
                     type="text"
@@ -49,7 +49,7 @@ export const LoginPage = ({ login }) => {
                   </S.ModalFormGroup>
                 </S.ModalFormLogin>
               </S.ModalBlock>
-            </S.Model>
+            </S.Modal>
           </S.ContainerLogin>
         </Wrapper>
       </>
