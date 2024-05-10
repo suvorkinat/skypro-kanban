@@ -4,7 +4,6 @@ import {routesPath } from './lib/routesPath.js';
 
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute.jsx';
 import { MainPage } from './pages/MainPage/MainPage.jsx';
-// import { PopBrowse } from './components/PopUps/PopBrowse/PopBrowse.jsx';
 import { ExitPage } from './pages/ExitPage/ExitPage.jsx';
 import { NotFound } from './pages/NotFoundPage/NotFound.jsx';
 import { LoginPage } from './pages/LoginPage/LoginPage.jsx';

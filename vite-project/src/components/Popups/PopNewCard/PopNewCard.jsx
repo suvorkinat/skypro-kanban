@@ -26,7 +26,7 @@ export function PopNewCard() {
                     name="name"
                     id="formTitle"
                     placeholder="Введите название задачи..."
-                    autoFocus
+                    autoFocus=""
                   />
                 </div>
                 <div className="form-new__block">
@@ -38,7 +38,8 @@ export function PopNewCard() {
                     name="text"
                     id="textArea"
                     placeholder="Введите описание задачи..."
-                  ></textarea>
+                    defaultValue={""}
+                  />
                 </div>
               </form>
               <Calendar />

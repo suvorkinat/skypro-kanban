@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BodyRegistr = styled.body`
+export const BodyRegister = styled.body`
   width: 100%;
   height: 100%;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -49,7 +49,7 @@ export const ModalBlock = styled.div`
   }
 `;
 
-export const ModelTtl = styled.div`
+export const ModalTtl = styled.div`
   text-align: center;
   font-size: 20px;
   font-weight: 700;
@@ -109,13 +109,13 @@ export const ModalBtnRegisterEnter = styled.span`
   }
 `;
 
-export const Hover01 = styled(ModalBtnRegistrEnter)`
+export const Hover01 = styled(ModalBtnRegisterEnter)`
   &:hover {
     background-color: #33399b;
   }
 `;
 
-export const ModalBtnRegisterEnterA = styled(ModalBtnRegistrEnter)`
+export const ModalBtnRegisterEnterA = styled(ModalBtnRegisterEnter)`
   width: 100%;
   height: 100%;
   color: #ffffff;
