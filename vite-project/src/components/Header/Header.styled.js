@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Hover1, Hover2, Hover3 } from "../../global.styled";
+import { Hover1, Hover2, Hover3 } from "../../lib/global.styled";
 
 export const Header = styled.header`
   width: 100%;
@@ -33,12 +33,12 @@ export const HeaderNav = styled.nav`
 
 //
 // background-color: ${({theme})=>theme.body};
-export const HeaderBtnMainNew=styled(Hover1('button')) `
+export const HeaderBtnMainNew = styled(Hover1("button"))`
   width: 178px;
   height: 30px;
   border-radius: 4px;
-  background-color: #565EEF;
-  color: #FFFFFF;
+  background-color: #565eef;
+  color: #ffffff;
   border: none;
   font-size: 14px;
   line-height: 1;
@@ -46,11 +46,11 @@ export const HeaderBtnMainNew=styled(Hover1('button')) `
   margin-right: 20px;
 `;
 
-export const HeaderBtnMainNewLink=styled.a`
-  color: #FFFFFF;
+export const HeaderBtnMainNewLink = styled.a`
+  color: #ffffff;
 `;
 
-export const HeaderUser=styled(Hover2('a')) `
+export const HeaderUser = styled(Hover2("a"))`
   height: 20px;
   display: flex;
   flex-wrap: nowrap;
@@ -58,7 +58,7 @@ export const HeaderUser=styled(Hover2('a')) `
   justify-content: center;
   font-size: 14px;
   line-height: 20px;
-  color: #565EEF;
+  color: #565eef;
 
   &::after {
     content: "";
@@ -66,8 +66,8 @@ export const HeaderUser=styled(Hover2('a')) `
     width: 6px;
     height: 6px;
     border-radius: 1px;
-    border-left: 1.9px solid #565EEF;
-    border-bottom: 1.9px solid #565EEF;
+    border-left: 1.9px solid #565eef;
+    border-bottom: 1.9px solid #565eef;
     transform: rotate(-45deg);
     margin: -6px 0 0 5px;
     padding: 0;
@@ -75,10 +75,10 @@ export const HeaderUser=styled(Hover2('a')) `
   &:hover::after {
     border-left-color: #33399b;
     border-bottom-color: #33399b;
-}
+  }
 `;
 
-export const HeaderExit=styled(Hover3('a')) `
+export const HeaderExit = styled(Hover3("a"))`
   background-color: #33399b;
-  color: #FFFFFF;
-`
+  color: #ffffff;
+`;
