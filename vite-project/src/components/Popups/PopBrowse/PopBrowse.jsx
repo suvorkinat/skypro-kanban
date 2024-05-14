@@ -5,14 +5,14 @@ import { routesPath } from "../../../lib/routesPath";
 import * as S from "./PopBrowse.styled.js"
 
 export const PopBrowse = () => {
-  const { cardId } = useParams();
+  const { id } = useParams();
   return (
     <S.PopBrouwseStyled id="popBrowse">
       <S.PopBrouwseContainer>
         <S.PopBrouwseBlock>
           <S.PopBrouwseContent>
             <S.PopBrouwseTopBlock>
-              <S.PopBrouwseTitle>Название задачи: {cardId}</S.PopBrouwseTitle>
+              <S.PopBrouwseTitle>Название задачи: {id}</S.PopBrouwseTitle>
               <div className="categories__theme theme-top _orange _active-category">
                 <p className="_orange">Web Design</p>
               </div>
