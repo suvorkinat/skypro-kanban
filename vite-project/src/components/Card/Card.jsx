@@ -19,7 +19,7 @@ export const Card = ({card}) => {
           </Link>
         </S.CardGroup>
         <S.CardContent>
-          <Link to={`card/${card.id}`}>
+          <Link to={`/card/${card.id}`}>
             <S.CardTitle>{card.title}</S.CardTitle>
           </Link>
           <S.CardDate>
