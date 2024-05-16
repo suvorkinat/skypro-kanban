@@ -159,13 +159,19 @@ export const HeaderUserSetTheme = styled.div`
   }
 `;
 
-export const HeaderExit= styled(Hover3('a')) `
-  box-sizing: border-box;
-  border: 1px solid ${({theme})=> theme.text2};
+export const HeaderExit= styled.button`
+  width: 72px;
+  height: 30px;
+  background: transparent;
+  color: #565eef;
   border-radius: 4px;
-  padding: 10px 14px 10px 14px;
-  margin: 34px 0px;
-  //background-color: #33399b;
- // color: #ffffff;
- color: ${({theme})=> theme.text2};
- `;
+  border: 1px solid #565eef;
+  ${Hover3}
+  &:hover a {
+    color: #ffffff;
+  }
+`;
+
+
+
+ 
