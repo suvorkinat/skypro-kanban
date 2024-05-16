@@ -14,7 +14,7 @@ export const Header = ({ addCard, setTheme, theme }) => {
   //
   return (
     <S.Header>
-            
+            <S.HeaderContainer>
                 <S.HeaderBlock>
                     <div>
                         <a href="" target="_self">
@@ -53,7 +53,7 @@ export const Header = ({ addCard, setTheme, theme }) => {
                         )}
                     </S.HeaderNav>
                 </S.HeaderBlock>
-            
+                </S.HeaderContainer>
         </S.Header>
     )
 }

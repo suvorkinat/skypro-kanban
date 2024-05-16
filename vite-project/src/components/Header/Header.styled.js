@@ -6,6 +6,13 @@ export const Header = styled.header`
   margin: 0 auto;
   background-color: #ffffff;
 `;
+export const HeaderContainer = styled.div`
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+`;
+
 
 export const HeaderBlock = styled.div`
   height: 70px;

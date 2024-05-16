@@ -6,7 +6,7 @@ import { Column } from "../Column/Column.jsx";
 export const Main = ({ cards }) => {
   return (
     <S.StyleMain>
-      <Container>
+      <S.MainContainer>
         <S.MainBlock>
           <S.StyledMainContent>
             <Column
@@ -31,7 +31,7 @@ export const Main = ({ cards }) => {
             />
           </S.StyledMainContent>
         </S.MainBlock>
-      </Container>
+      </S.MainContainer>
     </S.StyleMain>
   );
 };

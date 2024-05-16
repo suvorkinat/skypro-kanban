@@ -5,6 +5,12 @@ export const StyleMain = styled.main`
   background-color: #eaeef6;
  background-color: ${({theme})=>theme.body};
 `;
+export const MainContainer = styled.div`
+max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+`;
 
 export const MainBlock = styled.div`
   width: 100%;
