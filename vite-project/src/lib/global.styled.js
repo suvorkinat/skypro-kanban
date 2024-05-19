@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-
+import { css } from "styled-components";
 
 export const GlobalStyled = createGlobalStyle `
 
@@ -125,12 +125,10 @@ export const Hover2 = (elem) => styled[elem] `
     }
 `;
 
-export const Hover3 = (elem) => styled[elem] `
+export const Hover3 = css`
     &:hover {
         background-color: #33399b;
         color: #FFFFFF;
-        a {
-            color: #FFFFFF;
-        }
+        
     }
 `;
