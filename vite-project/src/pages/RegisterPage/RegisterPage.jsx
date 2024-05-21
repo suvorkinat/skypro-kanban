@@ -75,7 +75,7 @@ export const RegisterPage = () => {
                 />
                  <p style={{color:"red"}}>{errorMessage}</p>
                 <Link to={routesPath.LOGIN}>
-                  <S.ModalBtnRegisterEnter id="RegistrEnter">
+                  <S.ModalBtnRegisterEnter id="RegisterEnter">
                     <S.ModalBtnRegisterEnterA>
                     <a onClick={registerHandler}>
                       Зарегистрироваться</a>

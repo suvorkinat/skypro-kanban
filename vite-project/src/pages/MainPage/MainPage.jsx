@@ -18,9 +18,9 @@ export const MainPage = ({setTheme, theme, isAuth}) => {
     function addCard(e) {
         e.preventDefault()
         const newCard = {
-          id: cards[cards.length-1]._id + 10,
+          _id: cards[cards.length-1]._id + 10,
           status: "Без статуса",
-          theme: "Web Design",
+          topic: "Web Design",
           ThemeColor: "_orange",
           title: "Название задачи",
           date: `${format(new Date(), "dd.MM.yy")}`,
