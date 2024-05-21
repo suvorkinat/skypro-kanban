@@ -33,13 +33,13 @@ export const Header = ({ addCard, setTheme, theme }) => {
                             </S.HeaderBtnMainNewLink>
                         </S.HeaderBtnMainNew>
                         <S.HeaderUser onClick={openModal}>
-                            Ivan Ivanov
+                            {isAuth.name}
                         </S.HeaderUser>
                         {isOpened && (
                             <S.HeaderUserSet id="user-set-target">
                                 {/* <a href="">x</a> */}
-                                <S.HeaderUserSetName>Ivan Ivanov</S.HeaderUserSetName>
-                                <S.HeaderUserSetMail>ivan.ivanov@gmail.com</S.HeaderUserSetMail>
+                                <S.HeaderUserSetName>{isAuth.name}</S.HeaderUserSetName>
+                                <S.HeaderUserSetMail>{isAuth.login}</S.HeaderUserSetMail>
                                 <S.HeaderUserSetTheme>
                                    <p>Темная тема</p>
                                     <input onChange={()=>setTheme(!theme)} type="checkbox" className="checkbox" name="checkbox" />
