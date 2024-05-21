@@ -18,7 +18,7 @@ export const MainPage = ({setTheme, theme, isAuth}) => {
     function addCard(e) {
         e.preventDefault()
         const newCard = {
-          id: cards[cards.length-1].id + 1,
+          id: cards[cards.length-1]._id + 10,
           status: "Без статуса",
           theme: "Web Design",
           ThemeColor: "_orange",
@@ -55,12 +55,12 @@ export const MainPage = ({setTheme, theme, isAuth}) => {
                 {/* pop-up end*/}
 
             <Header 
+             isAuth={isAuth}
             addCard={addCard}
-            isAuth={isAuth}
             setTheme={setTheme} 
             theme={theme}/>
               {errorMsg ? <p>${errorMsg}</p> : (
-                isLoading ? ("Загрузка...") : (<MainComponent errorMsg={errorMsg}  cards={cards}/>)
+                isLoading ? ("Загрузка...") : (<Main errorMsg={errorMsg}  cards={cards}/>)
             )}
         </Wrapper>
     )

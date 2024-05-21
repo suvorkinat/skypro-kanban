@@ -1,9 +1,9 @@
 import { useState } from "react";
 import * as S from "./Header.styled.js";
-//import { Container } from "../../lib/global.styled.js";
 import { Link } from "react-router-dom";
 import { routesPath } from "../../lib/routesPath.js";
-export const Header = ({ addCard, setTheme, theme }) => {
+
+export const Header = ({ addCard, setTheme, theme, isAuth }) => {
   // Пункт_№1: Модальное окно
   const [isOpened, setIsOpened] = useState(false);
 
