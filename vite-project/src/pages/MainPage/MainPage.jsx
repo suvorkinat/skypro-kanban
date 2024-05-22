@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
 import { Main } from '../../components/Main/Main.jsx';
-import { cardList } from "../../data.js";
 import { Wrapper } from "../../lib/global.styled.js";
 import { Header } from '../../components/Header/Header.jsx';
 import {PopNewCard} from '../../components/Popups/PopNewCard/PopNewCard.jsx';
@@ -16,9 +15,13 @@ export const MainPage = ({setTheme, theme, isAuth}) => {
 
 
     function addCard(e) {
-        e.preventDefault()
+        e.preventDefault();
+        let newId = 1; // начальное значение id
+    if (cards.length > 0) {
+        newId = cards[cards.length - 1]._id + 10;
+    }
         const newCard = {
-          _id: cards[cards.length-1]._id + 10,
+          _id: newId,
           status: "Без статуса",
           topic: "Web Design",
           ThemeColor: "_orange",
