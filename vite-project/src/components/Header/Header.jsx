@@ -1,9 +1,9 @@
 import { useState } from "react";
 import * as S from "./Header.styled.js";
-//import { Container } from "../../lib/global.styled.js";
 import { Link } from "react-router-dom";
 import { routesPath } from "../../lib/routesPath.js";
-export const Header = ({ addCard, setTheme, theme }) => {
+
+export const Header = ({ addCard, setTheme, theme, isAuth }) => {
   // Пункт_№1: Модальное окно
   const [isOpened, setIsOpened] = useState(false);
 
@@ -33,13 +33,13 @@ export const Header = ({ addCard, setTheme, theme }) => {
                             </S.HeaderBtnMainNewLink>
                         </S.HeaderBtnMainNew>
                         <S.HeaderUser onClick={openModal}>
-                            Ivan Ivanov
+                            {isAuth.name}
                         </S.HeaderUser>
                         {isOpened && (
                             <S.HeaderUserSet id="user-set-target">
                                 {/* <a href="">x</a> */}
-                                <S.HeaderUserSetName>Ivan Ivanov</S.HeaderUserSetName>
-                                <S.HeaderUserSetMail>ivan.ivanov@gmail.com</S.HeaderUserSetMail>
+                                <S.HeaderUserSetName>{isAuth.name}</S.HeaderUserSetName>
+                                <S.HeaderUserSetMail>{isAuth.login}</S.HeaderUserSetMail>
                                 <S.HeaderUserSetTheme>
                                    <p>Темная тема</p>
                                     <input onChange={()=>setTheme(!theme)} type="checkbox" className="checkbox" name="checkbox" />
