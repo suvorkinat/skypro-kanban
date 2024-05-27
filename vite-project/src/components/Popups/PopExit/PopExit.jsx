@@ -1,16 +1,12 @@
 import { routesPath } from "../../../lib/routesPath.js";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import * as S from "./PopExit.styled.js";
+import { useContext } from "react";
+import { UserContext } from "../../../context/userContext.jsx";
 
-export const  PopExit = ({ setIsAuth }) => {
-
-  const navigate = useNavigate ();
-
-  const logOut = () => {
-    setIsAuth(null);
-    navigate(routesPath.LOGIN);
-  }
+export const  PopExit = () => {
+  const {logOutContext} = useContext(UserContext);
 
   return (
     <S.PopExit id="popExit">
@@ -22,7 +18,7 @@ export const  PopExit = ({ setIsAuth }) => {
           <form className="pop-exit__form" id="formExit" action="#">
             <S.PopExitFormGroup>
               <Link to={routesPath.LOGIN}>
-                <S.PopExitExitYes onClick={logOut} id="exitYes">
+                <S.PopExitExitYes onClick={logOutContext} id="exitYes">
                   Да, выйти
                 </S.PopExitExitYes>
               </Link>
