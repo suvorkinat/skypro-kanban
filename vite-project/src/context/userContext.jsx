@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { routesPath } from "../../lib/routesPath.js";
+import { routesPath } from '../lib/routesPath';
 
 export const UserContext = createContext(null);
 

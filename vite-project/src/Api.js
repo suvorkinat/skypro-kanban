@@ -37,6 +37,62 @@ export async function postTodo({token, text}) {
     return data;
   }
 
+  //change task 
+  export async function putTodo({ token, id, taskData }) {
+    const response = await fetch(basaHost + `/${id}`, {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+        method: "PUT",
+        body: JSON.stringify(taskData)
+    });
+  
+  
+    if (!response.status === 201) {
+        throw new Error("Ошибка");
+    }
+  
+    const data = await response.json();
+    return data;
+  }
+  
+
+  //delete task 
+  export async function deleteTodo({ taskData, id, token }) {
+    const response = await fetch(basaHost + `/${id}`, {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+        method: "DELETE",
+        body: JSON.stringify({
+            taskData,
+        })
+    });
+    if (!response.status === 201) {
+      throw new Error("Ошибка");
+  }
+
+  const data = await response.json();
+  return data;
+}
+
+export async function getUsersList({ token }) {
+  const response = await fetch(userHost, {
+      headers: {
+          Authorization: `Bearer ${token}`,
+      },
+  });
+
+
+  if (!response.status === 201) {
+      throw new Error("Ошибка");
+  }
+
+  const data = await response.json();
+  return data;
+}
+  
+
   //РЕГИСТРАЦИЯ
 export const register = ({ name, login, password }) => {
     return fetch(userHost, {
