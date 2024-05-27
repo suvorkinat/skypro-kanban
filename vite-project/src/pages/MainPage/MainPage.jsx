@@ -28,8 +28,7 @@ export const MainPage = ({setTheme, theme }) => {
             setErrorMsg(err)
         }).finally(() =>{
             setIsLoading(false)
-        }
-    )
+        })
 
     }, [user, setCards]);
 
@@ -48,7 +47,6 @@ export const MainPage = ({setTheme, theme }) => {
         <Wrapper>
             <Outlet />
             <Header
-                // addCard={addCard}
                 setTheme={setTheme}
                 theme={theme}
             />
