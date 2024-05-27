@@ -10,12 +10,12 @@ import { TaskContext } from "../../context/taskContext.jsx";
 
 
 export const MainPage = ({setTheme, theme }) => {
-    const [cards, setCards] = useContext(TaskContext);
+    const {cards, setCards} = useContext(TaskContext);
     const [isLoading, setIsLoading] = useState(true);
 
     const [errorMsg, setErrorMsg] = useState('');
 
-    const {user} = useContext(UserContext)
+    const {user} = useContext(UserContext);
 
     useEffect (() => {
         setIsLoading (true)
