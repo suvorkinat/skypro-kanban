@@ -33,7 +33,7 @@ export const LoginPage = () => {
     }
     loginAuth(inputValue).then((response) => {
       setErrorMessage('')
-     loginContext.loginContext(response)
+     loginContext(response)
     }).catch ((err)=>{
       setErrorMessage(err.message)
     })
