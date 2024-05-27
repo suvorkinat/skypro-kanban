@@ -4,7 +4,7 @@ import {lightTheme, darkTheme} from './lib/globalTheme.js';
 import { GlobalStyled } from './lib/global.styled.js';
 import { ThemeProvider } from 'styled-components';
 import { AppRoutes } from './AppRoutes.jsx';
-//import { UserProvider } from './context/userContext.jsx';
+import { UserProvider } from './context/userContext.jsx';
 
 
 
