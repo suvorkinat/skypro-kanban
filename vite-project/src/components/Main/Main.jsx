@@ -1,8 +1,5 @@
 import * as S from "./Main.styled.js";
-import { Container } from "../../lib/global.styled.js";
-
 import { Column } from "../Column/Column.jsx";
-
 export const Main = ({ cards }) => {
   return (
     <S.StyleMain>

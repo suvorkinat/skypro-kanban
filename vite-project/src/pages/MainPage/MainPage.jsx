@@ -1,9 +1,7 @@
 import { useEffect, useState, useContext } from "react";
-//import { format } from "date-fns";
 import { Main } from '../../components/Main/Main.jsx';
 import { Wrapper } from "../../lib/global.styled.js";
 import { Header } from '../../components/Header/Header.jsx';
-//import {PopNewCard} from '../../components/Popups/PopNewCard/PopNewCard.jsx';
 import { Outlet } from 'react-router-dom';
 import { getCards } from "../../Api.js";
 import { Column } from "../../components/Column/Column.jsx";

@@ -6,11 +6,8 @@ import { UserContext } from "../../context/userContext";
 export const PrivateRoute = () => {
 
     const {user} = useContext(UserContext)
-    if (!user) {
-        return <Navigate to = {routesPath.LOGIN} />;
-    }
 
-
-    // return isAuth ? <Outlet /> : <Navigate to = {routesPath.LOGIN} />;
     return user ? <Outlet /> : <Navigate to = {routesPath.LOGIN} />;
+
+   // return user ? <Outlet /> : <Navigate to = {routesPath.LOGIN} />;
 }
