@@ -56,7 +56,7 @@ export const MainPage = ({setTheme, theme }) => {
             />
             {errorMsg ? <p>${errorMsg}</p> : (
                 isLoading ? ("Загрузка...") : (
-                    <MainComponent errorMsg={errorMsg} cards={cards}>
+                    <Main errorMsg={errorMsg} cards={cards}>
                         {statusList.map((status) => (
                             <Column
                                 title={status}
@@ -64,7 +64,7 @@ export const MainPage = ({setTheme, theme }) => {
                                 cardList={cards.filter((card) => card.status === status)}
                             />
                         ))}
-                    </MainComponent>
+                    </Main>
                 )
             )}
         </Wrapper>
