@@ -5,7 +5,6 @@ import { routesPath } from '../lib/routesPath';
 export const UserContext = createContext(null);
 
 function getUserLocalStorage() {
-    // let user = ''
     try {
       return JSON.parse(localStorage.getItem("user"))
     }
@@ -37,7 +36,6 @@ export const UserProvider = ({ children }) => {
         navigate(routesPath.LOGIN)
     }
 
-    // return <UserContext.Provider value={'Hello'}> - Вывод текста
 
     return <UserContext.Provider value={{ loginContext, user, logOutContext }}>
         {children}

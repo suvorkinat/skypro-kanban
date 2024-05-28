@@ -38,7 +38,7 @@ export async function postTodo({token, text}) {
   }
 
   //change task 
-  export async function putTodo({ token, id, taskData }) {
+  export async function changeTodo({ token, id, taskData }) {
     const response = await fetch(basaHost + `/${id}`, {
         headers: {
             Authorization: `Bearer ${token}`,

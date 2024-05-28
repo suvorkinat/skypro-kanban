@@ -132,3 +132,22 @@ export const Hover3 = css`
         
     }
 `;
+
+const orange = css`
+    background-color:#FFE4C2;
+    color: #FF6D00;
+`
+const green = css`
+    background-color:#B4FDD1;
+    color: #06B16E;
+`
+const purple = css`
+    background-color:#E9D4FF;
+    color: #9A48F1;
+`
+
+export const colorTheme = (color) => css`
+    ${color=== 'orange' && orange}
+    ${color=== 'green' && green}
+    ${color=== 'purple' && purple}
+`

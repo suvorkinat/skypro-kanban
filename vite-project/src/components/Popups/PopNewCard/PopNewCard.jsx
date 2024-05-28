@@ -23,7 +23,7 @@ export const PopNewCard = () => {
     description:'',
   })
 
-   //Обработка БЭК
+
    const OnAddNewCard = () => {
     setError('')
     const title = !inputValue.title ? 'Новая задача' : inputValue.title
