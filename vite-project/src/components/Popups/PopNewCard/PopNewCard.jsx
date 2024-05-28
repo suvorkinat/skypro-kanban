@@ -24,7 +24,7 @@ export const PopNewCard = () => {
   })
 
    //Обработка БЭК
-   const OnAddNewTask = () => {
+   const OnAddNewCard = () => {
     setError('')
     const title = !inputValue.title ? 'Новая задача' : inputValue.title
     const topic = !inputValue.topic ? 'Research' : inputValue.topic
@@ -65,7 +65,6 @@ export const PopNewCard = () => {
           <S.PopNewCardContent>
             <S.PopNewCardTtl>Создание задачи</S.PopNewCardTtl>
             <S.PopNewCardClose>
-            {" "}
             <Link to={routesPath.MAIN}>&#10006;</Link>
             </S.PopNewCardClose>
             <S.PopNewCardWrap>
@@ -83,9 +82,9 @@ export const PopNewCard = () => {
                       />
                     </S.FormNewBlock>
                     <S.FormNewBlock>
-                      <S.SubTtl htmlFor="textArea">
+                      <S.Subttl htmlFor="textArea">
                         Описание задачи
-                      </S.SubTtl>
+                      </S.Subttl>
                       <S.FormNewArea
                         onChange={onChangeInput}
                         name="description"
