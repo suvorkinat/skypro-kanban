@@ -21,7 +21,7 @@ export const MainPage = ({setTheme, theme }) => {
         setIsLoading (true)
 
         getCards(user.token).then((response) =>{
-            setErrorMsg( ' ')
+            //setErrorMsg( ' ')
             setCards(response.tasks)
             setIsLoading (false)
         }).catch((err) => {
