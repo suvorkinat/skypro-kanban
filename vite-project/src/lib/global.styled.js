@@ -114,15 +114,15 @@ background-color: ${({theme})=>theme.body};
 `; 
 
 
-export const Hover1 = (block) => styled[block] `
-    &:hover {
-        background-color: #33399b;
-    }
+export const Hover1 = css`
+&:hover {
+  background-color: #33399b;
+}
 `;
-export const Hover2 = (elem) => styled[elem] `
-    &:hover {
-        color: #33399b;
-    }
+export const Hover2 = css`
+&:hover {
+  color: #33399b;
+}
 `;
 
 export const Hover3 = css`

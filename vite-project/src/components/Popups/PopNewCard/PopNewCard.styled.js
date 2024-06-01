@@ -42,7 +42,7 @@ export const PopNewCardContainer = styled.div`
 export const PopNewCardBlock = styled.div`
   display: block;
   margin: 0 auto;
-  background-color: ${({theme})=> theme.body};
+  background-color: #FFFFFF;
   max-width: 630px;
   width: 100%;
   padding: 40px 30px 48px;

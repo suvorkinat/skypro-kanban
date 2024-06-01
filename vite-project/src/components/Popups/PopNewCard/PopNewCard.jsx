@@ -41,7 +41,7 @@ export const PopNewCard = () => {
       return setError('Заполните описание')
     }
     postTodo({
-      newCard,
+      task:newCard,
       token: user.token
     }).then((responce)=>{
       console.log(responce)

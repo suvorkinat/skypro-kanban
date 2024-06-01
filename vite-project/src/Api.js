@@ -22,13 +22,13 @@ export const getCards = (token) => {
   }
 
   //Добавить задачу в список
-export async function postTodo({token, text}) {
+export async function postTodo({token, task}) {
     const response = await fetch(host, {
       headers: {
         Authorization:  `Bearer ${token}`,
       },
       method: "POST",
-      body: JSON.stringify({text})
+      body: JSON.stringify({task})
     });
     if (!response.status === 200) {
       throw new Error("Ошибка");
