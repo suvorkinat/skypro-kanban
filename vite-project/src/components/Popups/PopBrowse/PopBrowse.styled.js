@@ -104,6 +104,19 @@ export const StatusPsubTtlP = styled.div`
   line-height: 16px;
   color: ${({theme})=> theme.text};
 `;
+export const StatusThemeLabel_1 = styled.p`
+  display: inline-block;
+  height: 30px;
+  padding: 5px 14px 5px 14px;
+  // border: solid 1px ${({theme})=> theme.text};
+  border-radius: 24px;
+  // cursor: pointer;
+  margin-right: 2px;
+  // opacity: 40%;
+  color: ${({theme})=> theme.textTheme};
+  background-color: ${({ $color }) =>
+    topicStyles[$color]?.backgroundColor || "#94A6BE"};
+`;
 
 export const StatusThemesDiv = styled.div`
     display: flex;
@@ -263,6 +276,11 @@ export const ButtonChengeDelete = styled.button`
   }
   ${Hover3}
 `;
+export const LinkClose = styled.a`
+  @media screen and (max-width: 495px) {
+    width: 100%;
+  }
+`
 
 export const ButtonClose = styled.button`
   border-radius: 4px;

@@ -39,7 +39,7 @@ export async function postTodo({token, task}) {
 
   //change task 
   export async function changeTodo({ token, id, taskData }) {
-    const response = await fetch(basaHost + `/${id}`, {
+    const response = await fetch(host + `/${id}`, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
@@ -59,7 +59,7 @@ export async function postTodo({token, task}) {
 
   //delete task 
   export async function deleteTodo({ taskData, id, token }) {
-    const response = await fetch(basaHost + `/${id}`, {
+    const response = await fetch(host + `/${id}`, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
