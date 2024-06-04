@@ -1,16 +1,18 @@
 import { topicColor } from "../../lib/topic.js";
 import * as S from "./Card.styled.js";
 import { Link } from "react-router-dom";
+import { format } from "date-fns";
+import ru from "date-fns/locale/ru";
 
-export const Card = ({card}) => {
+export const Card = ({topic, id, title, date}) => {
   return (
     <S.CardItem>
       <S.CardsCard>
         <S.CardGroup>
-          <S.CardTheme $color={topicColor[card.topic]}>
-            <S.CardName>{card.topic}</S.CardName>
+          <S.CardTheme $color={topicColor[topic]}>
+            <S.CardName>{topic}</S.CardName>
           </S.CardTheme>
-          <Link to = {`/card/${card._id}`} >
+          <Link to = {`/card/${id}`} >
             <S.CardBtn>
               <S.CardBtnDiv />
               <S.CardBtnDiv />
@@ -19,8 +21,8 @@ export const Card = ({card}) => {
           </Link>
         </S.CardGroup>
         <S.CardContent>
-          <Link to={`/card/${card._id}`}>
-            <S.CardTitle>{card.title}</S.CardTitle>
+          <Link to={`/card/${id}`}>
+            <S.CardTitle>{title}</S.CardTitle>
           </Link>
           <S.CardDate>
             <svg
@@ -51,7 +53,7 @@ export const Card = ({card}) => {
                 </clipPath>
               </defs>
             </svg>
-            <p>{card.date}</p>
+            <p>{format(date, "PP", { locale: ru })}</p>
           </S.CardDate>
         </S.CardContent>
       </S.CardsCard>

@@ -1,14 +1,13 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useState, useContext } from "react";
 
 import { Wrapper } from '../../lib/global.styled.js';
 import * as S from '../../pages/LoginPage/LoginPage.styled.js';
 import { routesPath } from "../../lib/routesPath.js";
 import { loginAuth } from "../../Api.js";
+import { UserContext } from "../../context/userContext.jsx";
 
-export const LoginPage = ({ setIsAuth }) => {
-
-  const navigate = useNavigate();
+export const LoginPage = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const [inputValue, setInputValue] = useState({
@@ -16,8 +15,11 @@ export const LoginPage = ({ setIsAuth }) => {
     password: '',
   })
 
+  const {loginContext} = useContext(UserContext)
+
+
   const onChangeInput = (e) => {
-    const {value, name} = e.target //;
+    const {value, name} = e.target
     setInputValue({...inputValue, [name]: value})
   }
 
@@ -31,9 +33,7 @@ export const LoginPage = ({ setIsAuth }) => {
     }
     loginAuth(inputValue).then((response) => {
       setErrorMessage('')
-      setIsAuth(response.user) //Данные помещаются из авторизации
-      localStorage.setItem('user', JSON.stringify(response.user))
-      navigate(routesPath.MAIN)
+     loginContext(response)
     }).catch ((err)=>{
       setErrorMessage(err.message)
     })

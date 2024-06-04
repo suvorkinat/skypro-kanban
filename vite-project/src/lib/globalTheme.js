@@ -3,7 +3,7 @@ export const lightTheme = {
     primary: '#FFFFFF',
     text: '#000',
     text2: '#565EEF',
-    // Другие стили светлой темы
+    headerLogo: 'public/logo.png',
     isDark: false
   
 };
@@ -13,6 +13,5 @@ export const darkTheme = {
     primary: '#20202C',
     text: '#FFF',
     tetx2: '#FFF',
-    // Другие стили темной темы
     isDark: true
 };

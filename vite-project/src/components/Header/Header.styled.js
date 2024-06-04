@@ -40,7 +40,7 @@ export const HeaderNav = styled.nav`
 
 //
 // background-color: ${({theme})=>theme.body};
-export const HeaderBtnMainNew=styled(Hover1('button')) `
+export const HeaderBtnMainNew=styled.button `
 width: 178px;
 height: 30px;
 border-radius: 4px;
@@ -57,16 +57,14 @@ justify-content: center;
 align-items: center;
 padding: 10px 14px;
 
-&:hover {
-  background-color: #33399b;
-}
+${Hover1};
 `;
 
 export const HeaderBtnMainNewLink=styled.a`
   color: #FFFFFF;
 `;
 
-export const HeaderUser=styled(Hover2('a')) `
+export const HeaderUser=styled.a `
   height: 20px;
   display: flex;
   flex-wrap: nowrap;
@@ -91,6 +89,7 @@ export const HeaderUser=styled(Hover2('a')) `
     border-left-color: #33399b;
     border-bottom-color: #33399b;
 }
+${Hover2}
 `;
 
 export const HeaderUserSet = styled.div`
