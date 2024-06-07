@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { topicStyles } from "../../../lib/topic";
 import { CardName } from "../../Card/Card.styled.js";
 import { Hover1, Hover3 } from "../../../lib/global.styled.js";
+import { Link } from "react-router-dom";
 
 
 export const PopBrouwseStyled = styled.div`
@@ -276,7 +277,7 @@ export const ButtonChengeDelete = styled.button`
   }
   ${Hover3}
 `;
-export const LinkClose = styled.a`
+export const LinkClose = styled(Link)`
   @media screen and (max-width: 495px) {
     width: 100%;
   }

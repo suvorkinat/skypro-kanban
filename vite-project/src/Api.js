@@ -58,7 +58,7 @@ export async function postTodo({token, task}) {
   
 
   //delete task 
-  export async function deleteTodo({ taskData, id, token }) {
+  export async function deleteTodo({ id, token, taskData }) {
     const response = await fetch(host + `/${id}`, {
         headers: {
             Authorization: `Bearer ${token}`,

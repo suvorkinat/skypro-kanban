@@ -13,7 +13,8 @@ import { deleteTodo, changeTodo } from "../../../Api.js";
 export const PopBrowse = () => {
   const { cardId } = useParams();
   const { user } = useUser();
-  const { cards } = useTask();
+  const { cards, setCards } = useTask();
+  const { navigate } = useNavigate();
 
   const [isEdited, setIsEdited] = useState(false);
   let openedCard = cards.find((card) => card._id === cardId);
